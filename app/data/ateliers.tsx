@@ -1,15 +1,15 @@
 import {
-  Bitcoin,
-  Bot,
   DoorOpen,
-  Eye,
   Fish,
   Glasses,
-  Lock,
   Server,
   Usb,
-  Wifi,
+  Bot,
 } from "lucide-react";
+import { WifiIcon } from "../components/ui/wifi-icon";
+import { LockIcon } from "../components/ui/lock-icon";
+import { BitcoinIcon } from "../components/ui/bitcoin-icon";
+import { EyeIcon } from "../components/ui/eye-icon";
 
 export const ateliers = [
   {
@@ -17,7 +17,7 @@ export const ateliers = [
     title: "Atelier MITM",
     description:
       "Tentez de remporter un séjour pour 2 personnes dans un hôtel en Suisse grâce à ce concours Instagram !",
-    icon: <Wifi className="w-6 h-6" />,
+    icon: <WifiIcon size={24} />,
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const ateliers = [
     title: "Atelier Mot de Passe",
     description:
       "Votre mot de passe est-il vraiment à l'épreuve des hackers ? Venez le découvrir… avant qu'il ne soit trop tard !",
-    icon: <Lock className="w-6 h-6" />,
+    icon: <LockIcon size={24} />,
   },
   {
     id: 4,
@@ -59,14 +59,14 @@ export const ateliers = [
     title: "Atelier Ransomware",
     description:
       "Un matin, vous allumez votre ordinateur et… tous vos fichiers sont bloqués. Payer ou tout perdre ?",
-    icon: <Bitcoin className="w-6 h-6" />,
+    icon: <BitcoinIcon size={24} />,
   },
   {
     id: 8,
     title: "Atelier OSINT",
     description:
       "Vous seriez surpris de tout ce qu'on peut savoir sur vous… Découvrez comment les hackers exploitent votre vie privée.",
-    icon: <Eye className="w-6 h-6" />,
+    icon: <EyeIcon size={24} />,
   },
   {
     id: 9,

@@ -1,17 +1,17 @@
 import {
-  Brain,
   GraduationCap,
-  Lock,
   ShieldAlert,
-  ShieldCheck,
 } from "lucide-react";
+import { BrainIcon } from "../components/ui/brain-icon";
+import { ShieldCheckIcon } from "../components/ui/shield-check-icon";
+import { LockIcon } from "../components/ui/lock-icon";
 
 export const objectifs = [
   {
     title: "Comprendre",
     description:
       "Mieux comprendre les différentes menaces et vulnérabilités informatiques afin d'anticiper les risques.",
-    icon: <Brain className="w-7 h-7" />,
+    icon: <BrainIcon size={28} />,
   },
   {
     title: "Apprendre",
@@ -23,7 +23,7 @@ export const objectifs = [
     title: "Expérimenter",
     description:
       "Expérimenter diverses stratégies de défense contre les cyberattaques et renforcer la sécurité numérique.",
-    icon: <ShieldCheck className="w-7 h-7" />,
+    icon: <ShieldCheckIcon size={28} />,
   },
   {
     title: "Développer",
@@ -35,6 +35,6 @@ export const objectifs = [
     title: "Découvrir",
     description:
       "Explorer les différentes carrières et formations en cybersécurité pour mieux comprendre le secteur.",
-    icon: <Lock className="w-7 h-7" />,
+    icon: <LockIcon size={28} />,
   },
 ];
