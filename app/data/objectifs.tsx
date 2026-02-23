@@ -1,40 +1,24 @@
-import {
-  GraduationCap,
-  ShieldAlert,
-} from "lucide-react";
-import { BrainIcon } from "../components/ui/brain-icon";
+import { ShieldAlert, Route } from "lucide-react";
 import { ShieldCheckIcon } from "../components/ui/shield-check-icon";
 import { LockIcon } from "../components/ui/lock-icon";
 
 export const objectifs = [
   {
-    title: "Comprendre",
+    title: "Faire découvrir de nouveaux parcours et filières",
     description:
-      "Mieux comprendre les différentes menaces et vulnérabilités informatiques afin d'anticiper les risques.",
-    icon: <BrainIcon size={28} />,
+      "Présenter les formations et métiers du numérique et de la cybersécurité pour ouvrir le champ des possibles.",
+    icon: <Route className="w-7 h-7" />,
   },
   {
-    title: "Apprendre",
+    title: "Sensibiliser aux enjeux et aux dangers du numérique",
     description:
-      "Apprendre à sécuriser efficacement ses données personnelles pour prévenir les risques de cyberattaques.",
-    icon: <GraduationCap className="w-7 h-7" />,
-  },
-  {
-    title: "Expérimenter",
-    description:
-      "Expérimenter diverses stratégies de défense contre les cyberattaques et renforcer la sécurité numérique.",
-    icon: <ShieldCheckIcon size={28} />,
-  },
-  {
-    title: "Développer",
-    description:
-      "Développer un esprit critique face aux informations en ligne et adopter des comportements sécurisés.",
+      "Mieux comprendre les menaces et les risques pour adopter des comportements plus sûrs au quotidien.",
     icon: <ShieldAlert className="w-7 h-7" />,
   },
   {
-    title: "Découvrir",
+    title: "Apprendre à protéger ses informations personnelles en ligne",
     description:
-      "Explorer les différentes carrières et formations en cybersécurité pour mieux comprendre le secteur.",
+      "Acquérir les bons réflexes pour sécuriser ses données et préserver sa vie privée sur internet.",
     icon: <LockIcon size={28} />,
   },
 ];

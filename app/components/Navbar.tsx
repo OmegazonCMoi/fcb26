@@ -33,11 +33,11 @@ export default function Navbar() {
         transition={{ duration: 0.5, delay: revealPhase === "title" ? 0.2 : 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "bg-black/70 backdrop-blur-2xl border-b border-white/[0.04]"
+            ? "bg-[#0a0a10]/80 backdrop-blur-2xl border-b border-white/[0.06]"
             : ""
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 h-16 flex items-center justify-between">
           <Link
             href="/"
             className="font-[family-name:var(--font-display)] text-sm font-bold tracking-[0.2em] uppercase text-white/90 hover:text-white transition-colors"
@@ -50,7 +50,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[13px] text-white/40 hover:text-white transition-colors duration-500 tracking-wide"
+                className="text-[13px] text-white/50 hover:text-white transition-colors duration-500 tracking-wide"
               >
                 {link.label}
               </Link>
@@ -84,7 +84,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/[0.06] p-8"
+              className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a10] border-b border-white/[0.08] p-8"
             >
               <div className="flex justify-between items-center mb-10">
                 <span className="font-[family-name:var(--font-display)] text-sm font-bold tracking-[0.2em] uppercase">
@@ -92,7 +92,7 @@ export default function Navbar() {
                 </span>
                 <button
                   onClick={() => setMobileOpen(false)}
-                  className="text-white/40 hover:text-white text-sm"
+                  className="text-white/50 hover:text-white text-sm"
                 >
                   Fermer
                 </button>

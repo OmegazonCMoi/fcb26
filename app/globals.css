@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #000000;
+  --color-background: #0a0a10;
   --color-foreground: #ffffff;
   --color-accent: #a855f7;
   --color-accent-dim: #7c3aed;
@@ -12,7 +12,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #18181b #000000;
+  scrollbar-color: #1e1e2a #0a0a10;
 }
 
 ::selection {
@@ -25,7 +25,9 @@ html {
 }
 
 body {
-  background-color: #000000;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a10;
   color: #ffffff;
   font-family: var(--font-body), system-ui, sans-serif;
 }

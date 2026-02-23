@@ -52,8 +52,8 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-24 border-y border-white/[0.04]">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section className="py-32 border-y border-white/[0.06]">
+      <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24">
         <div className="grid grid-cols-3 gap-4">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 0.05}>
@@ -61,7 +61,7 @@ export default function StatsSection() {
                 <div className="font-[family-name:var(--font-display)] text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
                   <Counter to={stat.value} sign={stat.sign} />
                 </div>
-                <p className="text-[13px] text-white/25 mt-2 tracking-wide uppercase">
+                <p className="text-[13px] text-white/35 mt-2 tracking-wide uppercase">
                   {stat.label}
                 </p>
               </div>

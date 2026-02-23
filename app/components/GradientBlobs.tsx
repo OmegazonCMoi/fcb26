@@ -15,9 +15,9 @@ export default function GradientBlobs() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="absolute -top-[300px] -right-[200px] w-[900px] h-[900px] rounded-full bg-purple-950/30 blur-[200px]" />
-      <div className="absolute top-[40%] -left-[300px] w-[700px] h-[700px] rounded-full bg-indigo-950/25 blur-[180px]" />
-      <div className="absolute -bottom-[200px] right-[20%] w-[600px] h-[600px] rounded-full bg-violet-950/20 blur-[160px]" />
+      <div className="absolute -top-[300px] -right-[200px] w-[900px] h-[900px] rounded-full bg-purple-950/40 blur-[200px]" />
+      <div className="absolute top-[40%] -left-[300px] w-[700px] h-[700px] rounded-full bg-indigo-950/30 blur-[180px]" />
+      <div className="absolute -bottom-[200px] right-[20%] w-[600px] h-[600px] rounded-full bg-violet-950/25 blur-[160px]" />
     </motion.div>
   );
 }

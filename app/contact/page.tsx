@@ -23,22 +23,22 @@ export default function ContactPage() {
   };
 
   const inputClasses =
-    "w-full px-0 py-3 bg-transparent border-0 border-b border-white/[0.06] text-white text-sm placeholder:text-white/15 focus:outline-none focus:border-white/20 transition-colors duration-500";
+    "w-full px-0 py-3 bg-transparent border-0 border-b border-white/[0.08] text-white text-sm placeholder:text-white/20 focus:outline-none focus:border-white/25 transition-colors duration-500";
 
   return (
     <>
       <GradientBlobs />
       <Navbar />
-      <main className="relative z-10 min-h-screen pt-32 pb-20">
-        <div className="max-w-[600px] mx-auto px-6">
+      <main className="relative z-10 min-h-screen pt-32 pb-28">
+        <div className="w-full max-w-[600px] mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <p className="text-[13px] text-white/25 tracking-[0.15em] uppercase mb-3">
+            <p className="text-[13px] text-white/35 tracking-[0.15em] uppercase mb-3">
               Contact
             </p>
             <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl font-bold tracking-tight mb-4">
               Écrivez-nous
             </h1>
-            <p className="text-white/25 text-[15px] mb-12">
+            <p className="text-white/35 text-[15px] mb-12">
               Une question sur le forum ? N&apos;hésitez pas.
             </p>
           </ScrollReveal>
@@ -47,7 +47,7 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
-                  <label className="block text-[11px] text-white/20 uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] text-white/30 uppercase tracking-wider mb-1">
                     Prénom
                   </label>
                   <input
@@ -59,7 +59,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[11px] text-white/20 uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] text-white/30 uppercase tracking-wider mb-1">
                     Nom
                   </label>
                   <input
@@ -73,7 +73,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label className="block text-[11px] text-white/20 uppercase tracking-wider mb-1">
+                <label className="block text-[11px] text-white/30 uppercase tracking-wider mb-1">
                   Statut
                 </label>
                 <select
@@ -81,23 +81,23 @@ export default function ContactPage() {
                   onChange={(e) => setStatus(e.target.value)}
                   className={`${inputClasses} appearance-none`}
                 >
-                  <option value="etudiant" className="bg-black">
+                  <option value="etudiant" className="bg-[#0a0a10]">
                     Étudiant
                   </option>
-                  <option value="professeur" className="bg-black">
+                  <option value="professeur" className="bg-[#0a0a10]">
                     Professeur
                   </option>
-                  <option value="personnel" className="bg-black">
+                  <option value="personnel" className="bg-[#0a0a10]">
                     Personnel
                   </option>
-                  <option value="partenaire" className="bg-black">
+                  <option value="partenaire" className="bg-[#0a0a10]">
                     Partenaire
                   </option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-[11px] text-white/20 uppercase tracking-wider mb-1">
+                <label className="block text-[11px] text-white/30 uppercase tracking-wider mb-1">
                   Email
                 </label>
                 <input
@@ -110,7 +110,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label className="block text-[11px] text-white/20 uppercase tracking-wider mb-1">
+                <label className="block text-[11px] text-white/30 uppercase tracking-wider mb-1">
                   Message
                 </label>
                 <textarea

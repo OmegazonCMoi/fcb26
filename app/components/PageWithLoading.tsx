@@ -18,7 +18,7 @@ function PageContent({
   }, [onLoadingComplete]);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-[#0a0a10]">
       {children}
       {showTerminal && (
         <LoadingScreen onComplete={handleTerminalComplete} />
