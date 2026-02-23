@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GradientBlobs from "../components/GradientBlobs";
@@ -76,24 +77,30 @@ export default function ContactPage() {
                 <label className="block text-[11px] text-white/30 uppercase tracking-wider mb-1">
                   Statut
                 </label>
-                <select
-                  value={status}
-                  onChange={(e) => setStatus(e.target.value)}
-                  className={`${inputClasses} appearance-none`}
-                >
-                  <option value="etudiant" className="bg-[#0a0a10]">
-                    Étudiant
-                  </option>
-                  <option value="professeur" className="bg-[#0a0a10]">
-                    Professeur
-                  </option>
-                  <option value="personnel" className="bg-[#0a0a10]">
-                    Personnel
-                  </option>
-                  <option value="partenaire" className="bg-[#0a0a10]">
-                    Partenaire
-                  </option>
-                </select>
+                <div className="relative">
+                  <select
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value)}
+                    className={`${inputClasses} appearance-none pr-10 cursor-pointer`}
+                  >
+                    <option value="etudiant" className="bg-[#0a0a10]">
+                      Étudiant
+                    </option>
+                    <option value="professeur" className="bg-[#0a0a10]">
+                      Professeur
+                    </option>
+                    <option value="personnel" className="bg-[#0a0a10]">
+                      Personnel
+                    </option>
+                    <option value="partenaire" className="bg-[#0a0a10]">
+                      Partenaire
+                    </option>
+                  </select>
+                  <ChevronDown
+                    className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 pointer-events-none"
+                    aria-hidden
+                  />
+                </div>
               </div>
 
               <div>
