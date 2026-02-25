@@ -46,8 +46,8 @@ function Counter({
 
 const stats = [
   { value: 10, sign: "", label: "Ateliers" },
-  { value: 150, sign: "+", label: "Participants" },
-  { value: 95, sign: "%", label: "Satisfaction" },
+  { value: 600, sign: "+", label: "Participants" },
+  { value: 98, sign: "%", label: "Satisfaction" },
 ];
 
 export default function StatsSection() {
