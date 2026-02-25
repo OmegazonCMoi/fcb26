@@ -4,10 +4,10 @@ import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 const partners = [
+  { name: "Gabriel Fauré", logo: "/partners/gabriel-faure.svg", smaller: true },
   { name: "Banque de France", logo: "/partners/banque-de-france.svg" },
   { name: "EducFI", logo: "/partners/educfi.svg" },
   { name: "Ville d'Annecy", logo: "/partners/ville-annecy.svg" },
-  { name: "Gabriel Fauré", logo: "/partners/gabriel-faure.svg", smaller: true },
   { name: "IUT Annecy", logo: "/partners/iut-annecy.svg" },
 ];
 
@@ -23,7 +23,7 @@ export default function PartnersSection() {
           <div className="flex flex-wrap items-center justify-center gap-16 md:gap-24">
             {partners.map((partner, i) => (
               <ScrollReveal key={partner.name} delay={i * 0.08}>
-                <div className={`relative flex items-center justify-center group ${partner.smaller ? "w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28" : "w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44"}`}>
+                <div className={`relative flex items-center justify-center group ${partner.smaller ? "w-14 h-14 sm:w-18 sm:h-18 md:w-26 md:h-26" : "w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44"}`}>
                   <Image
                     src={partner.logo}
                     alt={partner.name}
