@@ -78,7 +78,7 @@ export const ateliers = [
   },
   {
     id: 11,
-    title: "RSSI",
+    title: "Annecy face aux cyberattaques",
     description:
       "Le Responsable de la Sécurité des Systèmes d'Information pilote la stratégie de cybersécurité d'une organisation. Découvrez ce métier essentiel et les enjeux de la protection des données.",
     icon: <ShieldCheck className="w-6 h-6" />,
