@@ -9,7 +9,7 @@ import { objectifs } from "../data/objectifs";
 
 const introText = `Le Forum CyberSécurité est présenté par les étudiants du BTS SIO (Services Informatiques aux Organisations). Notre filière assure l'ensemble de la gestion du projet : de la conception technique des ateliers à l'organisation logistique, en passant par la stratégie de communication.
 Nous mettons à profit notre expertise technique et notre sens de l'organisation pour proposer une expérience immersive et pédagogique à l'ensemble du lycée.
-Nous remercions le lycée Gabriel Fauré et sa direction pour leur confiance. Nous exprimons également notre gratitude au bureau de l'APELGF (Association des Parents d'Élèves du Lycée Gabriel Fauré) pour son précieux soutien au projet.`;
+Nous remercions le lycée Gabriel Fauré et sa direction pour leur confiance. Nous exprimons également notre gratitude à la Banque de France et leur programme Educfi, ainsi que la Ville d'Annecy pour leurs participations et confiance sur le projet.`;
 
 const objectifText =
   "L'objectif est de pouvoir présenter aux différents membres du lycée Gabriel Fauré les enjeux du numérique et ses dangers.";
