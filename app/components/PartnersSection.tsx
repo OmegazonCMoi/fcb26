@@ -8,6 +8,7 @@ const partners = [
   { name: "EducFI", logo: "/partners/educfi.svg" },
   { name: "Ville d'Annecy", logo: "/partners/ville-annecy.svg" },
   { name: "Gabriel Fauré", logo: "/partners/gabriel-faure.svg", smaller: true },
+  { name: "IUT Annecy", logo: "/partners/iut-annecy.svg" },
 ];
 
 export default function PartnersSection() {

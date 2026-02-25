@@ -107,12 +107,11 @@ export default function PresentationPage() {
                 à ce dépliant.
               </p>
               <a
-                href="https://forum.lycee-faure.fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:text-accent/80 text-sm md:text-base font-medium transition-colors"
+                href="/FCB26 - Depliant.pdf"
+                download="FCB26-Depliant.pdf"
+                className="text-accent hover:text-accent/80 text-sm md:text-base font-medium transition-colors inline-flex items-center gap-2"
               >
-                forum.lycee-faure.fr
+                Télécharger le dépliant
               </a>
             </ScrollReveal>
           </div>

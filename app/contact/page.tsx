@@ -18,7 +18,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:contact@fcb26.fr?subject=Contact de ${firstnameRef.current?.value} ${lastnameRef.current?.value} - ${status}&body=${messageRef.current?.value}`;
+    window.location.href = `mailto:noah@dekeyzer.fr?subject=Contact de ${firstnameRef.current?.value} ${lastnameRef.current?.value} - ${status}&body=${messageRef.current?.value}`;
     setSent(true);
     setTimeout(() => setSent(false), 3000);
   };

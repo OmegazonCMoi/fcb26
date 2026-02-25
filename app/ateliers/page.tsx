@@ -9,19 +9,25 @@ import GradientBlobs from "../components/GradientBlobs";
 import ScrollReveal from "../components/ScrollReveal";
 import { ateliers } from "../data/ateliers";
 
-const bentoClass: Record<number, string> = {
-  1: "md:col-start-1 md:col-span-2 md:row-start-1 md:row-span-1",
-  2: "md:col-start-1 md:col-span-1 md:row-start-2 md:row-span-4",
-  3: "md:col-start-2 md:col-span-2 md:row-start-2 md:row-span-2",
-  4: "md:col-start-1 md:col-span-3 md:row-start-6 md:row-span-1",
-  5: "md:col-start-3 md:col-span-1 md:row-start-1 md:row-span-1",
-  6: "md:col-start-4 md:col-span-2 md:row-start-1 md:row-span-3",
-  7: "md:col-start-6 md:col-span-1 md:row-start-1 md:row-span-5",
-  8: "md:col-start-5 md:col-span-2 md:row-start-6 md:row-span-1",
-  9: "md:col-start-2 md:col-span-1 md:row-start-4 md:row-span-2",
-  10: "md:col-start-3 md:col-span-3 md:row-start-4 md:row-span-2",
-  11: "md:col-start-4 md:col-span-1 md:row-start-6 md:row-span-1",
-};
+// Ordre d’importance : du plus grand au plus petit rectangle → Phishing, Mots de Passe, Ransomware, IA, Dark Web, Backdoor, OSINT, Juice Jacking. MITM + Éducation Financière + RSSI en dessous.
+const BENTO_ORDER = [4, 1, 2, 9, 8, 5, 7, 6] as const; // ids par ordre d’importance
+const BENTO_PLACEMENTS = [
+  "md:col-start-1 md:row-start-1 md:col-span-2 md:row-span-2", // 1. Phishing (plus grand)
+  "md:col-start-1 md:row-start-3 md:col-span-1 md:row-span-3", // 2. Mots de Passe
+  "md:col-start-3 md:row-start-1 md:col-span-3 md:row-span-1", // 3. Ransomware
+  "md:col-start-2 md:row-start-3 md:col-span-2 md:row-span-2", // 4. IA et Sécurité
+  "md:col-start-4 md:row-start-2 md:col-span-2 md:row-span-2", // 5. Dark Web
+  "md:col-start-4 md:row-start-4 md:col-span-2 md:row-span-2", // 6. Backdoor
+  "md:col-start-2 md:row-start-5 md:col-span-2 md:row-span-1", // 7. OSINT
+  "md:col-start-3 md:row-start-2 md:col-span-1 md:row-span-1", // 8. Juice Jacking (plus petit)
+];
+
+const bentoAteliers = BENTO_ORDER.map(
+  (id) => ateliers.find((a) => a.id === id)!
+).filter(Boolean);
+const outsideAteliers = ateliers.filter(
+  (a) => a.id === 3 || a.id === 10 || a.id === 11
+); // MITM, Éducation Financière, RSSI
 
 export default function AteliersPage() {
   const [selected, setSelected] = useState<(typeof ateliers)[0] | null>(null);
@@ -54,8 +60,8 @@ export default function AteliersPage() {
 
           <ScrollReveal>
             <div className="rounded-[1.75rem] md:rounded-[2.25rem] p-2">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 md:grid-rows-6 gap-2">
-                {ateliers.map((atelier) => (
+              <div className="grid grid-cols-3 md:grid-cols-5 md:grid-rows-5 gap-2">
+                {bentoAteliers.map((atelier, i) => (
                   <motion.button
                     key={atelier.id}
                     type="button"
@@ -63,7 +69,7 @@ export default function AteliersPage() {
                     whileHover={{ scale: 1.015 }}
                     whileTap={{ scale: 0.985 }}
                     transition={{ duration: 0.2 }}
-                    className={`relative overflow-hidden rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-white/[0.15] transition-all duration-200 cursor-pointer min-h-[90px] ${bentoClass[atelier.id] || ""}`}
+                    className={`relative overflow-hidden rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.06] hover:border-white/[0.15] transition-all duration-200 cursor-pointer min-h-[90px] ${BENTO_PLACEMENTS[i] ?? ""}`}
                   >
                     <div className="absolute inset-0 flex items-center justify-center text-white/[0.08]">
                       <span className="scale-[2]">{atelier.icon}</span>
@@ -80,6 +86,33 @@ export default function AteliersPage() {
                 ))}
               </div>
             </div>
+
+            {outsideAteliers.length > 0 && (
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                {outsideAteliers.map((atelier) => (
+                  <motion.button
+                    key={atelier.id}
+                    type="button"
+                    onClick={() => setSelected(atelier)}
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.99 }}
+                    className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.12] p-6 text-left transition-all duration-200"
+                  >
+                    <div className="flex items-start gap-4">
+                      <span className="text-white/30 shrink-0">{atelier.icon}</span>
+                      <div>
+                        <span className="font-[family-name:var(--font-display)] text-lg font-semibold text-white/90 block mb-1">
+                          {atelier.title}
+                        </span>
+                        <span className="text-sm text-white/40 line-clamp-2">
+                          {atelier.description}
+                        </span>
+                      </div>
+                    </div>
+                  </motion.button>
+                ))}
+              </div>
+            )}
           </ScrollReveal>
         </div>
       </main>

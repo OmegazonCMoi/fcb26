@@ -4,34 +4,28 @@ import {
   Glasses,
   Usb,
   Bot,
+  Landmark,
+  ShieldCheck,
 } from "lucide-react";
 import { WifiIcon } from "../components/ui/wifi-icon";
 import { LockIcon } from "../components/ui/lock-icon";
 import { BitcoinIcon } from "../components/ui/bitcoin-icon";
 import { EyeIcon } from "../components/ui/eye-icon";
-import { Landmark, Building2 } from "lucide-react";
 
 export const ateliers = [
   {
     id: 1,
-    title: "Ransomware",
-    description:
-      "Un matin, vous allumez votre ordinateur et… tous vos fichiers sont bloqués. Payer ou tout perdre ? Apprenez à éviter ce choix impossible.",
-    icon: <BitcoinIcon size={24} />,
-  },
-  {
-    id: 2,
     title: "Mot de passe",
     description:
       "Votre mot de passe est-il vraiment à l'épreuve des hackers ? Venez le découvrir… avant qu'il ne soit trop tard !",
     icon: <LockIcon size={24} />,
   },
   {
-    id: 3,
-    title: "MITM (Man in the Middle)",
+    id: 2,
+    title: "Ransomware",
     description:
-      "Quand vous naviguez sur le web, êtes-vous sûr d'être vraiment seul ? Une présence invisible pourrait bien vous observer…",
-    icon: <WifiIcon size={24} />,
+      "Un matin, vous allumez votre ordinateur et… tous vos fichiers sont bloqués. Payer ou tout perdre ? Apprenez à éviter ce choix impossible.",
+    icon: <BitcoinIcon size={24} />,
   },
   {
     id: 4,
@@ -77,16 +71,16 @@ export const ateliers = [
   },
   {
     id: 10,
-    title: "Éducation budgétaire",
+    title: "Éducation Financière",
     description:
       "Un budget mal maîtrisé, un projet qui s'effondre, et des choix quotidiens qui impactent tout un avenir… L'équilibre est fragile, et les clés de la gestion financière sont désormais entre vos mains. Venez découvrir les enjeux de l'éducation budgétaire avec les experts de la Banque de France.",
     icon: <Landmark className="w-6 h-6" />,
   },
   {
     id: 11,
-    title: "Cyber Attaque",
+    title: "RSSI",
     description:
-      "Une administration visée par une cyberattaque, des services municipaux perturbés et un défi technique de grande ampleur à relever. L'expérience a été marquante, et la reconstruction du système d'information est aujourd'hui une priorité. Venez découvrir comment la Ville d'Annecy a fait face à cette épreuve, les solutions mises en place pour s'en sortir et les enseignements tirés pour l'avenir.",
-    icon: <Building2 className="w-6 h-6" />,
+      "Le Responsable de la Sécurité des Systèmes d'Information pilote la stratégie de cybersécurité d'une organisation. Découvrez ce métier essentiel et les enjeux de la protection des données.",
+    icon: <ShieldCheck className="w-6 h-6" />,
   },
 ];
