@@ -20,7 +20,7 @@ export default function Hero() {
             className="mb-8"
           >
             <span className="inline-block text-[13px] text-white/40 tracking-[0.15em] uppercase font-[family-name:var(--font-body)]">
-              16 & 17 mars 2026 · Annecy
+              du 16 au 19 mars 2026 · Annecy
             </span>
           </motion.div>
         )}
