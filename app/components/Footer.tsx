@@ -26,6 +26,13 @@ export default function Footer() {
           >
             Contact
           </Link>
+          <Link
+            href="https://fmenoni.com"
+            target="_blank"
+            className="text-[12px] text-white hover:text-white/50 transition-colors duration-500"
+          >
+            FMenoni - Créateur du site
+          </Link>
         </div>
       </div>
     </footer>
